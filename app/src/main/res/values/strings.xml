@@ -62,4 +62,5 @@
     <string name="showOther">2,500 CHF</string>
     <string name="finalSalary">Salaire versé</string>
     <string name="showFinalSalary">4,000</string>
+    <string name="title_activity_personnal_data">PersonnalDataActivity</string>
 </resources>
