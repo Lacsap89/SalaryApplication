@@ -49,6 +49,10 @@
             android:name=".PersonnalDataActivity"
             android:label="@string/title_activity_personnal_data" >
         </activity>
+        <activity
+            android:name=".PersonnalDataModify"
+            android:label="@string/title_activity_personnal_data_modify" >
+        </activity>
     </application>
 
 </manifest>
