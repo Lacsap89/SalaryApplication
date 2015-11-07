@@ -1,4 +1,4 @@
-package com.example.pascal.salaryapplication;
+package com.example.pascal.salaryapplication.App;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.example.pascal.salaryapplication.R;
 
 public class ProfessionnalDataActivity extends AppCompatActivity {
 

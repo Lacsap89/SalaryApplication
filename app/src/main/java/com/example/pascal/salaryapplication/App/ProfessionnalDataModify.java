@@ -1,4 +1,4 @@
-package com.example.pascal.salaryapplication;
+package com.example.pascal.salaryapplication.App;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.example.pascal.salaryapplication.R;
 
 public class ProfessionnalDataModify extends AppCompatActivity {
     EditText editPost;

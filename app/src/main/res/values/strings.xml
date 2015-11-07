@@ -7,8 +7,10 @@
     <string name="showPercentage">100</string>
     <string name="showHollidayLeft">20</string>
     <string name="showBoss">Yannick Da Silva</string>
+    <string name="modify">Modifier</string>
 
-    <string name="app_name">SalaryApplication</string>
+    <!-- modify professionnal Data resources and common resources -->
+
     <string name="post">Poste occupé</string>
     <string name="editPost">Directeur administratif</string>
     <string name="contractBegin">Début du contrat</string>
@@ -33,10 +35,11 @@
     <string name="boss">Supérieur hiérarchique</string>
     <string name="editBoss">Yannick Da Silva</string>
     <string name="saveChange">Sauvegarder</string>
-    <string name="action_settings">Settings</string>
-    <string name="modify">Modifier</string>
-    <string name="title_activity_professionnal_data_modify">ProfessionnalDataModify</string>
 
+    <!-- other resources -->
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_professionnal_data_modify">ProfessionnalDataModify</string>
+    <string name="app_name">Pascal Délèze</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_salary">Salary</string>
 

@@ -1,23 +1,25 @@
-package com.example.pascal.salaryapplication;
+package com.example.pascal.salaryapplication.App;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class PersonnalDataActivity extends AppCompatActivity {
+import com.example.pascal.salaryapplication.R;
+
+public class PersonnalDataModify extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personnal_data);
+        setContentView(R.layout.activity_personnal_data_modify);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_personnal_data_modify, menu);
+        return true;
     }
 
     @Override
