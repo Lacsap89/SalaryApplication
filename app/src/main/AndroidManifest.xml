@@ -49,13 +49,13 @@
             android:label="@string/title_activity_personnal_data_modify" >
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".App.Login"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
