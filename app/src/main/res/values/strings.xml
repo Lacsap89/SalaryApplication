@@ -84,6 +84,8 @@
     <string name="showNationality">Allemande</string>
     <string name="showWorkPermit">C</string>
     <string name="showBank">Raiffeisen Basel IBAN: CH93 0076 2011 6238 5295 7</string>
+    <string name="title_activity_login">Login</string>
+    <string name="loginTitle">My Salary App</string>
 
 
 </resources>
