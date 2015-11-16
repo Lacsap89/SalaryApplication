@@ -81,4 +81,38 @@ public final class SalaryContract {
                 + "FOREIGN KEY (" + KEY_POSTID + ") REFERENCES " + PersonalData.TABLE_PERSONALDATA + " (" +KEY_POSTID + "), "
                 + ");";
     }
+
+    public abstract class SalaryData implements BaseColumns{
+
+        //Table name
+        public static final String TABLE_SalaryDATA = "Professionnal data";
+
+        //Column names
+
+        public static final String KEY_SALARYID = "Id";
+        public static final String KEY_AVSAIAPGAC = "AVS/AI/APG/AC";
+        public static final String KEY_LPP = "LPP";
+        public static final String KEY_LAA = "LAA";
+        public static final String KEY_ALFA = "Family Taxes";
+        public static final String KEY_NETSALARY = "Net salary";
+        public static final String KEY_ADVANCE = "Advance";
+        public static final String KEY_EXTERNALTAXES = "Withholding taxes";
+        public static final String KEY_OTHER = "Other";
+        public static final String KEY_FINALSALARY = "Final salary";
+
+        //Table create statement
+        public static final String CREATE_TABLE_SALARY_DATA = "CREATE TABLE"
+                + TABLE_SalaryDATA + "("
+                + SalaryData.KEY_SALARYID + "INTEGER PRIMARY KEY, "
+                + SalaryData.KEY_AVSAIAPGAC + "DOUBLE, "
+                + SalaryData.KEY_LPP + "DOUBLE, "
+                + SalaryData.KEY_LAA + "DOUBLE, "
+                + SalaryData.KEY_ALFA + "DOUBLE, "
+                + SalaryData.KEY_NETSALARY + "DOUBLE, "
+                + SalaryData.KEY_ADVANCE + "DOUBLE, "
+                + SalaryData.KEY_EXTERNALTAXES + "DOUBLE, "
+                + SalaryData.KEY_OTHER + "DOUBLE, "
+                + SalaryData.KEY_FINALSALARY + "DOUBLE, ";
+
+    }
 }
