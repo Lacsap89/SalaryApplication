@@ -52,7 +52,23 @@ public class PersonalData {
     public String getBank() {return bank;}
     public void setBank(String bank) {this.bank=bank;}
 
+    public String getLogin() {return login;}
+    public void setLogin(String login) {this.login=login;}
 
+    public String getContractBegin() {return contractBegin;}
+    public void setContractBegin(String contractBegin) {this.contractBegin=contractBegin;}
+
+    public int getPercentage(){return percentage;}
+    public void setPercentage(int percentage) {this.percentage=percentage;}
+
+    public int getHollidayLeft() {return hollidayLeft;}
+    public void setHollidayLeft(int hollidayLeft) {this.hollidayLeft=hollidayLeft;}
+
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password=password;}
+
+    public int getPostId() {return postId;}
+    public void setPostId(int postId) {this.postId=postId;}
 
 
 }

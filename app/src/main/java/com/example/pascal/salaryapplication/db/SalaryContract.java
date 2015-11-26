@@ -90,6 +90,7 @@ public final class SalaryContract {
         //Column names
 
         public static final String KEY_SALARYID = "Id";
+        public static final String KEY_BRUTSALARY = "Brut salary";
         public static final String KEY_AVSAIAPGAC = "AVS/AI/APG/AC";
         public static final String KEY_LPP = "LPP";
         public static final String KEY_LAA = "LAA";
@@ -104,6 +105,7 @@ public final class SalaryContract {
         public static final String CREATE_TABLE_SALARY_DATA = "CREATE TABLE"
                 + TABLE_SalaryDATA + "("
                 + SalaryData.KEY_SALARYID + "INTEGER PRIMARY KEY, "
+                + SalaryData.KEY_BRUTSALARY + "DOUBLE,"
                 + SalaryData.KEY_AVSAIAPGAC + "DOUBLE, "
                 + SalaryData.KEY_LPP + "DOUBLE, "
                 + SalaryData.KEY_LAA + "DOUBLE, "
