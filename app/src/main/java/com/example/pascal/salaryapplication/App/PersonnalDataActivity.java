@@ -1,9 +1,11 @@
 package com.example.pascal.salaryapplication.App;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.pascal.salaryapplication.R;
 import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
@@ -43,5 +45,9 @@ public class PersonnalDataActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void gotoModify(View view) {
+        Intent intent = new Intent(this,PersonnalDataModify.class);
+        startActivity(intent);
     }
 }
