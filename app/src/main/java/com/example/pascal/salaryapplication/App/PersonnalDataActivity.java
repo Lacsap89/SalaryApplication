@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.pascal.salaryapplication.R;
+import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
+import com.example.pascal.salaryapplication.db.object.PersonalData;
 
 public class PersonnalDataActivity extends AppCompatActivity {
 
@@ -13,6 +15,12 @@ public class PersonnalDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personnal_data);
+
+        PersonalData personalData = new PersonalData();
+
+        PersonalDataSource pds = new PersonalDataSource(this);
+
+
     }
 
     @Override
