@@ -52,8 +52,6 @@ public class PersonalData {
     public String getBank() {return bank;}
     public void setBank(String bank) {this.bank=bank;}
 
-    public String getLogin() {return login;}
-    public void setLogin(String login) {this.login=login;}
 
     public String getContractBegin() {return contractBegin;}
     public void setContractBegin(String contractBegin) {this.contractBegin=contractBegin;}

@@ -61,7 +61,7 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
         personalData.setPassword("Test");
         personalData.setPostId(1);
 
-        personalData.setId((int) pds.createPersonalData(personalData));
+        personalData.setId(( pds.updatePersonalData(personalData)));
 
         SQLiteHelper sqlHelper = SQLiteHelper.getInstance(this);
         sqlHelper.getWritableDatabase().close();

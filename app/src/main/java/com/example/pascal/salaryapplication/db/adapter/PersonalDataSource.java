@@ -61,8 +61,8 @@ public class PersonalDataSource {
 
         Cursor cursor = this.db.rawQuery(sql, null);
 
-        if(cursor != null)
-            cursor.moveToFirst();
+
+        cursor.moveToFirst();
 
         PersonalData personalData = new PersonalData();
         personalData.setName(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_NAME)));
@@ -73,7 +73,7 @@ public class PersonalDataSource {
         personalData.setNbChildren(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_NBCHILDREN)));
         personalData.setNationality(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_NATIONALITY)));
         personalData.setPermit(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PERMIT)));
-        personalData.setBank(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_BANK)));
+        //personalData.setBank(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_BANK)));
         personalData.setContractBegin(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN)));
         personalData.setPercentage(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PERCENTAGE)));
         personalData.setHollidayLeft(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT)));
