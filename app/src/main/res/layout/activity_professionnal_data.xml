@@ -218,7 +218,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/modify" />
+            android:text="@string/modify"
+            android:onClick="gotoModifyPro"/>
 
     </LinearLayout>
 

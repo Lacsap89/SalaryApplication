@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.pascal.salaryapplication.R;
@@ -45,5 +46,9 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void gotoModifyPro(View view) {
+        Intent intent = new Intent(this,ProfessionnalDataModify.class);
+        startActivity(intent);
     }
 }

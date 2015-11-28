@@ -1,17 +1,21 @@
 package com.example.pascal.salaryapplication.App;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.example.pascal.salaryapplication.R;
 import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
 import com.example.pascal.salaryapplication.db.object.PersonalData;
 
-public class PersonnalDataActivity extends AppCompatActivity {
+public class PersonnalDataActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,7 @@ public class PersonnalDataActivity extends AppCompatActivity {
 
         PersonalDataSource pds = new PersonalDataSource(this);
 
-
+// SETTINGS
     }
 
     @Override
@@ -39,15 +43,37 @@ public class PersonnalDataActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+       
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+
+//SETTINGS DISPLAY
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setView(R.layout.dialog_settings)
+                    .create()
+                    .show();
+            RadioButton frRb = (RadioButton)findViewById(R.id.diagRbFr);
+            RadioButton enRb = (RadioButton)findViewById(R.id.diagRbEn);
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+// BUTTON
+
     public void gotoModify(View view) {
+
         Intent intent = new Intent(this,PersonnalDataModify.class);
         startActivity(intent);
     }
+
+
+
+
+
+
+
+
+
 }
