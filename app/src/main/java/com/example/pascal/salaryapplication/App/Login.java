@@ -3,7 +3,6 @@ package com.example.pascal.salaryapplication.App;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -11,9 +10,8 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
-import com.example.pascal.salaryapplication.App.PersonnalDataActivity;
+
 import com.example.pascal.salaryapplication.R;
 import com.example.pascal.salaryapplication.db.SQLiteHelper;
 import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
@@ -22,10 +20,9 @@ import com.example.pascal.salaryapplication.db.adapter.SalaryDataSource;
 import com.example.pascal.salaryapplication.db.object.PersonalData;
 import com.example.pascal.salaryapplication.db.object.ProfessionalData;
 import com.example.pascal.salaryapplication.db.object.SalaryData;
-
 import java.util.Locale;
 
-import static com.example.pascal.salaryapplication.R.id.switch1;
+
 
 public class Login extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
@@ -40,10 +37,10 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         Switch t = (Switch) findViewById(R.id.switch1);
         t.setOnCheckedChangeListener(this);
-        setSupportActionBar(toolbar);
+
 
 
 
@@ -101,8 +98,7 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
         if (isChecked) {
             // The toggle is enabled
-            Toast.makeText(Login.this.getApplicationContext(),"Checked",Toast.LENGTH_LONG)
-                    .show();
+
             Locale myLocale = new Locale("fr");
             Locale.setDefault(myLocale);
             android.content.res.Configuration config = new android.content.res.Configuration();
@@ -118,10 +114,9 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
         } else {
             // The toggle is disabled
-            Toast.makeText(Login.this.getApplicationContext(),"Not Checked",Toast.LENGTH_LONG)
-                    .show();
 
-            Locale myLocale = new Locale("en_US");
+
+            Locale myLocale = new Locale("en");
             Locale.setDefault(myLocale);
             android.content.res.Configuration config = new android.content.res.Configuration();
             config.locale = myLocale;
