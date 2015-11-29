@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
 import com.example.pascal.salaryapplication.R;
 import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
@@ -44,8 +43,6 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
         return super.onCreateOptionsMenu(menu);
-
-
     }
    // RADIO BUTTONS
     public void onRadioButtonClicked(View view) {
@@ -58,10 +55,12 @@ public class PersonnalDataActivity extends AppCompatActivity  {
             case R.id.diagRbFr:
                 if (checked)
                     // FRENCH
+
                     break;
             case R.id.diagRbEn:
                 if (checked)
                     // ENGLISH
+
                     break;
         }
     }
