@@ -26,7 +26,7 @@ public final class SalaryContract {
         public static final String KEY_NBCHILDREN = "Number_of_children";
         public static final String KEY_NATIONALITY = "Nationality";
         public static final String KEY_PERMIT = "Permit";
-        public static final String KEY_BANK = " Bank";
+        public static final String KEY_BANK = "Bank";
         public static final String KEY_CONTRACT_BEGIN = "Contract_begin";
         public static final String KEY_PERCENTAGE = "Percentage";
         public static final String KEY_HOLLIDAY_LEFT = "Hollidays_left";
@@ -76,7 +76,6 @@ public final class SalaryContract {
                 + ProfessionnalData.KEY_SALARY_CLASS + " INTEGER, "
                 + ProfessionnalData.KEY_BOSS + " TEXT, "
                 + ProfessionnalData.KEY_SALARYID + " INTEGER, "
-                + " FOREIGN KEY (" + KEY_POSTID + ") REFERENCES " + PersonalData.TABLE_PERSONALDATA + " (" +KEY_POSTID + ")"
                 + ");";
     }
 

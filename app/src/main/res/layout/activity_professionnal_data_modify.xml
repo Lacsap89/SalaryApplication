@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/salaryClass"/>
 
-        <Spinner android:id="@+id/editSalaryClass"
+        <EditText android:id="@+id/editSalaryClass"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
@@ -136,6 +136,7 @@
 
 
         <Button
+            android:id="@+id/save"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

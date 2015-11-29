@@ -36,7 +36,8 @@ public class PersonnalDataModify extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        personalData.setId(1);
+
+        personalData = pds.getPersonById(1);
         save = (Button) findViewById(R.id.save);
         address = (EditText) findViewById(R.id.editText3);
         birthdate = (EditText) findViewById(R.id.editText2);
@@ -64,7 +65,7 @@ public class PersonnalDataModify extends AppCompatActivity {
                 personalData.setBirthdate(birthdate.getText().toString());
                 personalData.setBank(bank.getText().toString());
                 personalData.setCivilStatus(civilStatus.getText().toString());
-                //personalData.setNbChildren(nbChildren);
+                personalData.setNbChildren(Integer.parseInt(nbChildren.getText().toString()));
                 personalData.setNationality(nationality.getText().toString());
                 personalData.setPermit(workPermit.getText().toString());
 

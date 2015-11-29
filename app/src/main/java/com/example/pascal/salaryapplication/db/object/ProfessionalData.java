@@ -5,14 +5,14 @@ package com.example.pascal.salaryapplication.db.object;
  */
 public class ProfessionalData {
 
-    private int id;
+    private int postId;
     private String post;
     private int salaryClass;
     private String boss;
     private int salaryId;
 
-    public int getId() {return id;}
-    public void setId(int id){this.id=id;}
+    public int getPostId() {return postId;}
+    public void setPostId(int postId){this.postId=postId;}
 
     public String getPost() {return post;}
     public void setPost(String post) {this.post=post;}
@@ -25,5 +25,8 @@ public class ProfessionalData {
 
     public int getSalaryId() {return salaryId;}
     public void setSalaryId(int salaryId) {this.salaryId=salaryId;}
+
+
+
 
 }

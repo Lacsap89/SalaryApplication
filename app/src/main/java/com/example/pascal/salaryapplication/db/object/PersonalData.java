@@ -15,10 +15,10 @@ public class PersonalData {
     private String nationality;
     private String permit;
     private String bank;
-    private String login;
     private String contractBegin;
     private int percentage;
     private int hollidayLeft;
+
     private String password;
     private int postId;
 
@@ -53,6 +53,13 @@ public class PersonalData {
     public void setBank(String bank) {this.bank=bank;}
 
 
+
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password=password;}
+
+    public int getPostId() {return postId;}
+    public void setPostId(int postId) {this.postId=postId;}
+
     public String getContractBegin() {return contractBegin;}
     public void setContractBegin(String contractBegin) {this.contractBegin=contractBegin;}
 
@@ -61,12 +68,6 @@ public class PersonalData {
 
     public int getHollidayLeft() {return hollidayLeft;}
     public void setHollidayLeft(int hollidayLeft) {this.hollidayLeft=hollidayLeft;}
-
-    public String getPassword() {return password;}
-    public void setPassword(String password) {this.password=password;}
-
-    public int getPostId() {return postId;}
-    public void setPostId(int postId) {this.postId=postId;}
 
 
 }
