@@ -26,16 +26,41 @@ public class PersonnalDataActivity extends AppCompatActivity  {
 
         PersonalDataSource pds = new PersonalDataSource(this);
 
-// SETTINGS
-    }
 
+    }
+    // MODIFY BUTTON
+
+    public void gotoModify(View view) {
+
+        Intent intent = new Intent(this,PersonnalDataModify.class);
+        startActivity(intent);
+    }
+// SETTINGS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
         return super.onCreateOptionsMenu(menu);
-    }
 
+  // RADIO BUTTONS
+    }
+    public void onRadioButtonClicked(View view) {
+
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.diagRbFr:
+                if (checked)
+                    // FRENCH
+                    break;
+            case R.id.diagRbEn:
+                if (checked)
+                    // ENGLISH
+                    break;
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -43,37 +68,29 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-       
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-//SETTINGS DISPLAY
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setView(R.layout.dialog_settings)
-                    .create()
+            builder.setView(R.layout.dialog_settings);
+   //OK AND CANCEL BUTTONS
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User cancelled the dialog
+                }
+            });
+
+            builder.create()
                     .show();
-            RadioButton frRb = (RadioButton)findViewById(R.id.diagRbFr);
-            RadioButton enRb = (RadioButton)findViewById(R.id.diagRbEn);
+
         }
 
         return super.onOptionsItemSelected(item);
     }
-
-// BUTTON
-
-    public void gotoModify(View view) {
-
-        Intent intent = new Intent(this,PersonnalDataModify.class);
-        startActivity(intent);
-    }
-
-
-
-
-
-
-
-
 
 }

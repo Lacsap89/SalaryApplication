@@ -33,21 +33,21 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
         android:id="@+id/editText4"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/usernameTView"
-        android:layout_alignRight="@+id/passwordTView" />
+        android:layout_below="@+id/EmplidTview"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Username"
-        android:id="@+id/usernameTView"
+        android:text="Employee ID"
+        android:id="@+id/EmplidTview"
         android:layout_marginTop="56dp"
         android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/passwordTView"
-        android:layout_alignEnd="@+id/passwordTView" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,9 +55,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Password"
         android:id="@+id/passwordTView"
-        android:layout_below="@+id/editText4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="fill_parent"

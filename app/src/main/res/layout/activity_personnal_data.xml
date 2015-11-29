@@ -9,14 +9,14 @@
         android:orientation="horizontal">
 
 
-        <ImageView android:id="@+id/idPhoto"
-            android:layout_weight="1"
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/street"
+            android:id="@+id/street"
+            android:layout_weight="1" />
 
-            android:layout_width="10dp"
-            android:layout_height="100dp"
-            android:hint="@string/idPhoto" />
-
-        <TextView android:id="@+id/address"
+        <TextView android:id="@+id/showStreet"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,6 +24,28 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:id="@+id/city"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/showCity"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/address"
+            android:text="@string/showCity" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -86,6 +86,9 @@
     <string name="showBank">Raiffeisen Basel IBAN: CH93 0076 2011 6238 5295 7</string>
     <string name="loginTitle">My Salary App</string>
     <string name="TEST">Sal0ut</string>
+    <string name="street">Addresse</string>
+    <string name="city">Localité</string>
+    <string name="showCity">Martigny</string>
 
 
 </resources>
