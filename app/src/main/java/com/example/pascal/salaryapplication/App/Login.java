@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -66,14 +68,14 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
 
     }
-// Language Switch
+
 // Change of activity
 
     public void gotoHome(View view) {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
-
+// Language Switch
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
@@ -87,6 +89,14 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
             android.content.res.Configuration config = new android.content.res.Configuration();
             config.locale = myLocale;
             getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+            TextView eid = (TextView) findViewById(R.id.EmplidTview);
+            eid.setText(R.string.emplidTview);
+            TextView pwd = (TextView) findViewById(R.id.passwordTView);
+            pwd.setText(R.string.lginPasswrdTview);
+            Button btn = (Button) findViewById(R.id.button);
+            btn.setText(R.string.lginBttnEnter);
+
         } else {
             // The toggle is disabled
             Toast.makeText(Login.this.getApplicationContext(),"Not Checked",Toast.LENGTH_LONG)
@@ -97,6 +107,13 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
             android.content.res.Configuration config = new android.content.res.Configuration();
             config.locale = myLocale;
             getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+            TextView eid = (TextView) findViewById(R.id.EmplidTview);
+            eid.setText(R.string.emplidTview);
+            TextView pwd = (TextView) findViewById(R.id.passwordTView);
+            pwd.setText(R.string.lginPasswrdTview);
+            Button btn = (Button) findViewById(R.id.button);
+            btn.setText(R.string.lginBttnEnter);
         }
     }
 }
