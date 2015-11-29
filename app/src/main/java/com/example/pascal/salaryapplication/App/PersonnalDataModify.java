@@ -68,8 +68,6 @@ public class PersonnalDataModify extends AppCompatActivity {
                 personalData.setNbChildren(Integer.parseInt(nbChildren.getText().toString()));
                 personalData.setNationality(nationality.getText().toString());
                 personalData.setPermit(workPermit.getText().toString());
-
-
                 pds.updatePersonalData(personalData);
 
                 PersonnalDataModify.this.startActivity(intent);

@@ -13,11 +13,13 @@ import com.example.pascal.salaryapplication.R;
 import com.example.pascal.salaryapplication.db.SalaryContract;
 
 public class MainActivity extends AppCompatActivity {
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        id = getIntent().getStringExtra("id");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
@@ -29,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void gotoperso(View view) {
         Intent intent = new Intent(this,PersonnalDataActivity.class);
+        intent.putExtra("id", id);
         startActivity(intent);
     }
     public void gotopro(View view) {
         Intent intent = new Intent(this,ProfessionnalDataActivity.class);
+        intent.putExtra("id", id);
         startActivity(intent);
     }
     public void gotosal(View view) {
         Intent intent = new Intent(this,Salary.class);
+        intent.putExtra("id", id);
         startActivity(intent);
     }
 

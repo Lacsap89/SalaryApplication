@@ -85,8 +85,11 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
         SalaryDataSource sds = new SalaryDataSource(this);
         personalData.setId(Integer.parseInt(id.getText().toString()));
         personalData = pds.getPersonById(personalData.getId());
-        if(personalData.getPassword().equals(password.getText().toString()))
+        if(personalData.getPassword().equals(password.getText().toString())) {
+
+            intent.putExtra("id", id.getText().toString());
             startActivity(intent);
+        }
         else {
             startActivity(intent2);
         }

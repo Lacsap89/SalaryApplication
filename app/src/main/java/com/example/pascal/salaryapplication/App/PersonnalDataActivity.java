@@ -20,7 +20,6 @@ public class PersonnalDataActivity extends AppCompatActivity  {
 
     TextView id;
     TextView street;
-    TextView city;
     TextView birthdate;
     TextView civilStatus;
     TextView children;
@@ -38,6 +37,26 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         PersonalDataSource pds = new PersonalDataSource(this);
 
 
+        id = (TextView) findViewById(R.id.showId);
+        street = (TextView) findViewById(R.id.showStreet);
+        birthdate = (TextView) findViewById(R.id.showBirthdate);
+        civilStatus = (TextView) findViewById(R.id.showCivilStatus);
+        children = (TextView) findViewById(R.id.showNbChildren);
+        nationality = (TextView) findViewById(R.id.showNationality);
+        workPermit = (TextView) findViewById(R.id.showWorkPermit);
+        bank = (TextView) findViewById(R.id.showBank);
+
+        id.setText(getIntent().getStringExtra("id"));
+        personalData = pds.getPersonById(Integer.parseInt(id.getText().toString()));
+
+
+        street.setText(personalData.getAddress());
+        birthdate.setText(personalData.getBirthdate());
+        civilStatus.setText(personalData.getCivilStatus());
+        children.setText(String.valueOf((personalData.getNbChildren())));
+        nationality.setText(personalData.getNationality());
+        workPermit.setText(personalData.getPermit());
+        bank.setText(personalData.getBank());
 
 
     }

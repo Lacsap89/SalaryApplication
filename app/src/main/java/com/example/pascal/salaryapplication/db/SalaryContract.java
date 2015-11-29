@@ -21,6 +21,7 @@ public final class SalaryContract {
         public static final String KEY_NAME = "Name";
         public static final String KEY_LASTNAME = "Lastname";
         public static final String KEY_ADDRESS = "Address";
+        public static final String KEY_CITY = "City";
         public static final String KEY_BIRTHDATE = "Birthdate";
         public static final String KEY_CIVILSTATUS = "Civil_status";
         public static final String KEY_NBCHILDREN = "Number_of_children";
@@ -40,6 +41,7 @@ public final class SalaryContract {
                 + PersonalData.KEY_NAME + " TEXT, "
                 + PersonalData.KEY_LASTNAME + " TEXT, "
                 + PersonalData.KEY_ADDRESS + " TEXT, "
+                + PersonalData.KEY_CITY + " TEXT, "
                 + PersonalData.KEY_BIRTHDATE + " TEXT, "
                 + PersonalData.KEY_CIVILSTATUS + " TEXT, "
                 + PersonalData.KEY_NBCHILDREN + " TEXT, "
