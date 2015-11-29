@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,13 @@ import java.util.Locale;
 
 public class Login extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
+    EditText id;
+    EditText password;
+    PersonalData personalData = new PersonalData();
+    ProfessionalData professionalData = new ProfessionalData();
+    SalaryData salaryData = new SalaryData();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,33 +43,29 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
 
 
-        PersonalData personalData = new PersonalData();
-        ProfessionalData professionalData = new ProfessionalData();
-        SalaryData salaryData = new SalaryData();
 
-        PersonalDataSource pds = new PersonalDataSource(this);
-        ProfessionalDataSource prds = new ProfessionalDataSource(this);
-        SalaryDataSource sds = new SalaryDataSource(this);
 
-        personalData.setName("Yannick");
-        personalData.setLastname("Da Silva");
-        personalData.setAddress("Rue du test 42");
-        personalData.setBirthdate("09.08.1988");
-        personalData.setCivilStatus("Single");
+        /*personalData.setName("Pascal");
+        personalData.setLastname("Délèze");
+        personalData.setAddress("Chemin du Catogne 13");
+        personalData.setBirthdate("10.05.1989");
+        personalData.setCivilStatus("Married");
         personalData.setNbChildren(0);
         personalData.setNationality("CH");
         personalData.setPermit("-");
-        personalData.setBank("CH000000000000000");
-        personalData.setContractBegin("01.01.2014");
+        personalData.setBank("CH0000000000011100");
+        personalData.setContractBegin("01.10.2014");
         personalData.setPercentage(60);
-        personalData.setHollidayLeft(0);
-        personalData.setPassword("Test");
-        personalData.setPostId(1);
+        personalData.setHollidayLeft(3);
+        personalData.setPassword("Test1");
+        personalData.setPostId(2);
 
-        personalData.setId((int) pds.createPersonalData(personalData));
-
+        personalData.setId(( pds.updatePersonalData(personalData)));
+        */
         SQLiteHelper sqlHelper = SQLiteHelper.getInstance(this);
         sqlHelper.getWritableDatabase().close();
+        id = (EditText) findViewById(R.id.editText4);
+        password = (EditText) findViewById(R.id.editText5);
 
 
     }
@@ -69,8 +73,20 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 // Change of activity
 
     public void gotoHome(View view) {
+
+
         Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
+        Intent intent2 = new Intent(this,Login.class);
+        PersonalDataSource pds = new PersonalDataSource(this);
+        ProfessionalDataSource prds = new ProfessionalDataSource(this);
+        SalaryDataSource sds = new SalaryDataSource(this);
+        personalData.setId(Integer.parseInt(id.getText().toString()));
+        personalData = pds.getPersonById(personalData.getId());
+        if(personalData.getPassword().equals(password.getText().toString()))
+            startActivity(intent);
+        else {
+            startActivity(intent2);
+        }
     }
 // Language Switch
     @Override

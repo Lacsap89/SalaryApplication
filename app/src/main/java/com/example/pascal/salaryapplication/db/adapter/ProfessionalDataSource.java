@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.pascal.salaryapplication.db.SQLiteHelper;
 import com.example.pascal.salaryapplication.db.SalaryContract;
+import com.example.pascal.salaryapplication.db.object.PersonalData;
 import com.example.pascal.salaryapplication.db.object.ProfessionalData;
 
 /**
@@ -47,20 +48,18 @@ public class ProfessionalDataSource {
 
     public ProfessionalData getProfessionalDataById(long id){
         String sql = "SELECT * FROM " + SalaryContract.ProfessionnalData.TABLE_PROFESSIONNALDATA +
-                " WHERE " + SalaryContract.ProfessionnalData.KEY_POSTID + " = " + id;
+                " WHERE " + SalaryContract.ProfessionnalData.KEY_POSTID + " = " + id ;
 
         Cursor cursor = this.db.rawQuery(sql, null);
 
-        if(cursor != null){
-            cursor.moveToFirst();
-        }
+
+
+        cursor.moveToFirst();
 
         ProfessionalData professionalData = new ProfessionalData();
-        professionalData.setId(cursor.getInt(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_POSTID)));
         professionalData.setPost(cursor.getString(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_POST)));
         professionalData.setSalaryClass(cursor.getInt(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_SALARY_CLASS)));
         professionalData.setBoss(cursor.getString(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_BOSS)));
-        professionalData.setSalaryId(cursor.getInt(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_SALARYID)));
 
         return professionalData;
     }
@@ -78,7 +77,7 @@ public class ProfessionalDataSource {
         values.put(SalaryContract.ProfessionnalData.KEY_SALARYID, professionalData.getSalaryId());
 
     return this.db.update(SalaryContract.ProfessionnalData.TABLE_PROFESSIONNALDATA, values, SalaryContract.ProfessionnalData.KEY_POSTID + " = ?",
-            new String[] {String.valueOf(professionalData.getId())});
+            new String[] {String.valueOf(professionalData.getPostId())});
     }
 
     /**

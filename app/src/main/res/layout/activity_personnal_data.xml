@@ -42,8 +42,7 @@
         <TextView android:id="@+id/showStreet"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/address"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -86,8 +85,7 @@
         <TextView android:id="@+id/showBirthdate"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showBirthdate"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -108,8 +106,7 @@
         <TextView android:id="@+id/showCivilStatus"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showCivilStatus"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -129,8 +126,7 @@
         <TextView android:id="@+id/showNbChildren"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showNbChildren"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -150,8 +146,7 @@
         <TextView android:id="@+id/showNationality"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showNationality"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -170,8 +165,7 @@
         <TextView android:id="@+id/showWorkPermit"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showWorkPermit"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -190,8 +184,7 @@
         <TextView android:id="@+id/showBank"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showBank"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -205,6 +198,7 @@
 
 
         <Button
+            android:id="@+id/modify"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

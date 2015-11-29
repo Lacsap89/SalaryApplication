@@ -9,12 +9,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pascal.salaryapplication.R;
 import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
 import com.example.pascal.salaryapplication.db.object.PersonalData;
 
 public class PersonnalDataActivity extends AppCompatActivity  {
+
+    TextView id;
+    TextView street;
+    TextView city;
+    TextView birthdate;
+    TextView civilStatus;
+    TextView children;
+    TextView nationality;
+    TextView workPermit;
+    TextView bank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +36,8 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         PersonalData personalData = new PersonalData();
 
         PersonalDataSource pds = new PersonalDataSource(this);
+
+
 
 
     }
@@ -60,7 +74,6 @@ public class PersonnalDataActivity extends AppCompatActivity  {
             case R.id.diagRbEn:
                 if (checked)
                     // ENGLISH
-
                     break;
         }
     }

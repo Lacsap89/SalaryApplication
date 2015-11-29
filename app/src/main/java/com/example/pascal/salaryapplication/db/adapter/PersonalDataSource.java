@@ -41,9 +41,6 @@ public class PersonalDataSource {
         values.put(SalaryContract.PersonalData.KEY_NATIONALITY, personalData.getNationality());
         values.put(SalaryContract.PersonalData.KEY_PERMIT, personalData.getPermit());
         values.put(SalaryContract.PersonalData.KEY_BANK, personalData.getBank());
-        values.put(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN, personalData.getContractBegin());
-        values.put(SalaryContract.PersonalData.KEY_PERCENTAGE, personalData.getPercentage());
-        values.put(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT, personalData.getHollidayLeft());
         values.put(SalaryContract.PersonalData.KEY_PASSWORD, personalData.getPassword());
         values.put(SalaryContract.PersonalData.KEY_POSTID, personalData.getPostId());
 
@@ -61,8 +58,8 @@ public class PersonalDataSource {
 
         Cursor cursor = this.db.rawQuery(sql, null);
 
-        if(cursor != null)
-            cursor.moveToFirst();
+
+        cursor.moveToFirst();
 
         PersonalData personalData = new PersonalData();
         personalData.setName(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_NAME)));
@@ -74,9 +71,6 @@ public class PersonalDataSource {
         personalData.setNationality(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_NATIONALITY)));
         personalData.setPermit(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PERMIT)));
         personalData.setBank(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_BANK)));
-        personalData.setContractBegin(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN)));
-        personalData.setPercentage(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PERCENTAGE)));
-        personalData.setHollidayLeft(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT)));
         personalData.setPassword(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PASSWORD)));
         personalData.setPostId(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_POSTID)));
 
@@ -98,9 +92,6 @@ public class PersonalDataSource {
         values.put(SalaryContract.PersonalData.KEY_NATIONALITY, personalData.getNationality());
         values.put(SalaryContract.PersonalData.KEY_PERMIT, personalData.getPermit());
         values.put(SalaryContract.PersonalData.KEY_BANK, personalData.getBank());
-        values.put(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN, personalData.getContractBegin());
-        values.put(SalaryContract.PersonalData.KEY_PERCENTAGE, personalData.getPercentage());
-        values.put(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT, personalData.getHollidayLeft());
         values.put(SalaryContract.PersonalData.KEY_PASSWORD, personalData.getPassword());
         values.put(SalaryContract.PersonalData.KEY_POSTID, personalData.getPostId());
 

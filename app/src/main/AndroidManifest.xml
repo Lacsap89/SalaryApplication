@@ -33,6 +33,7 @@
         <activity
             android:name=".App.PersonnalDataActivity"
             android:label="@string/title_activity_personnal_data" >
+
         </activity>
         <activity
             android:name=".App.PersonnalDataModify"
