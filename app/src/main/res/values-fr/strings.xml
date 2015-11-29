@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- show professionnal Data resources-->
 
@@ -81,7 +82,7 @@
     <string name="showBirthdate">24.01.1965</string>
     <string name="showCivilStatus">M</string>
     <string name="showNbChildren">1</string>
-    <string name="showNationality">Allemande</string>
+    <string name="showNationality">DE</string>
     <string name="showWorkPermit">C</string>
     <string name="showBank">Raiffeisen Basel IBAN: CH93 0076 2011 6238 5295 7</string>
     <string name="loginTitle">My Salary App</string>
@@ -89,9 +90,9 @@
     <string name="street">Addresse</string>
     <string name="city">Localité</string>
     <string name="showCity">Martigny</string>
-    <string name="lginBttnEnter">Enter</string>
-    <string name="lginPasswrdTview">Password</string>
-    <string name="emplidTview">Employee ID</string>
+    <string name="lginBttnEnter">Entrer</string>
+    <string name="lginPasswrdTview">Mot de passe</string>
+    <string name="emplidTview">ID Employé</string>
     <string name="title_activity_main">Pascal Délèze</string>
     <string name="title_activity_login">Pascal Délèze</string>
     <string name="proBtn">Vos Données Contractuelles</string>

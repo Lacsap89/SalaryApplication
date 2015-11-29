@@ -1,21 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- show professionnal Data resources-->
 
-    <string name="showPost">Directeur administratif</string>
+    <string name="showPost">Administrative Director</string>
     <string name="showContractBegin">29.10.2015</string>
-    <string name="showSalaryClass">Classe 1</string>
+    <string name="showSalaryClass">Class 1</string>
     <string name="showPercentage">100</string>
     <string name="showHollidayLeft">20</string>
     <string name="showBoss">Yannick Da Silva</string>
-    <string name="modify">Modifier</string>
+    <string name="modify">Modify</string>
 
     <!-- modify professionnal Data resources and common resources -->
 
-    <string name="post">Poste occupé</string>
-    <string name="editPost">Directeur administratif</string>
-    <string name="contractBegin">Début du contrat</string>
+    <string name="post">Position</string>
+    <string name="editPost">Administrative Director</string>
+    <string name="contractBegin">Contract Start</string>
     <string name="editContractBegin">29.10.2015</string>
-    <string name="salaryClass">Classe salariale</string>
+    <string name="salaryClass">Salary Class</string>
     <string-array name="editSalaryClass">
         <item>Classe 1</item>
         <item>Classe 2</item>
@@ -28,16 +29,16 @@
         <item>Classe 9</item>
         <item>Classe 10</item>
     </string-array>
-    <string name="percentage">Taux d activité</string>
+    <string name="percentage">Work Rate</string>
     <string name="editPercentage">100%</string>
-    <string name="hollidayLeft">Vacances restantes</string>
+    <string name="hollidayLeft">Holidays Left</string>
     <string name="editHollidayLeft">20</string>
-    <string name="boss">Supérieur hiérarchique</string>
+    <string name="boss">Manager</string>
     <string name="editBoss">Yannick Da Silva</string>
-    <string name="saveChange">Sauvegarder</string>
+    <string name="saveChange">Save Changes</string>
 
     <!-- other resources -->
-    <string name="action_settings">Paramètres</string>
+    <string name="action_settings">Settings</string>
     <string name="title_activity_professionnal_data_modify">ProfessionnalDataModify</string>
     <string name="app_name">Pascal Délèze</string>
     <string name="hello_world">Hello world!</string>
@@ -45,7 +46,7 @@
 
 
     <!-- Salary resources -->
-    <string name="brutSalary">Salaire brut</string>
+    <string name="brutSalary">Raw Salary</string>
     <string name="showBrutSalary">10,000 CHF</string>
     <string name="AVS">AVS/AI/APG/AC</string>
     <string name="showAVS">1,000 CHF</string>
@@ -53,17 +54,17 @@
     <string name="showLPP">500 CHF</string>
     <string name="LAA">LAA</string>
     <string name="showLAA">"500 CHF"</string>
-    <string name="alfa">Allocations familiales</string>
+    <string name="alfa">Family Benefits</string>
     <string name="showAlfa">0 CHF</string>
-    <string name="netSalary">Salaire net</string>
+    <string name="netSalary">Salary</string>
     <string name="showNetSalary">8,000 CHF</string>
-    <string name="advance">Avance sur salaire</string>
+    <string name="advance">Advance on Salary</string>
     <string name="showAdvance">1,000 CHF</string>
-    <string name="taxes">Impôts à la source</string>
+    <string name="taxes">Tax at source</string>
     <string name="showTaxes">2,500 CHF</string>
-    <string name="other">Autres retenues</string>
+    <string name="other">Others</string>
     <string name="showOther">2,500 CHF</string>
-    <string name="finalSalary">Salaire versé</string>
+    <string name="finalSalary">Salary Due</string>
     <string name="showFinalSalary">4,000</string>
     <string name="title_activity_personnal_data">PersonnalDataActivity</string>
     <string name="title_activity_personnal_data_modify">PersonnalDataModify</string>
@@ -71,34 +72,34 @@
     <!-- Personnal Data resources -->
     <string name="idPhoto">Photo pro</string>
     <string name="address">Route de la Pierre 25</string>
-    <string name="birthdate">Date de Naissance</string>
-    <string name="civilStatus">Etat civil</string>
-    <string name="nbChildren">Enfants</string>
-    <string name="nationality">Nationalité</string>
-    <string name="workPermit">Permis</string>
-    <string name="bank">Banque</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="civilStatus">Civil Status</string>
+    <string name="nbChildren">Children</string>
+    <string name="nationality">Nationality</string>
+    <string name="workPermit">Work Permit</string>
+    <string name="bank">Bank</string>
 
     <string name="showBirthdate">24.01.1965</string>
     <string name="showCivilStatus">M</string>
     <string name="showNbChildren">1</string>
-    <string name="showNationality">Allemande</string>
+    <string name="showNationality">DE</string>
     <string name="showWorkPermit">C</string>
     <string name="showBank">Raiffeisen Basel IBAN: CH93 0076 2011 6238 5295 7</string>
     <string name="loginTitle">My Salary App</string>
     <string name="TEST">Sal0ut</string>
-    <string name="street">Addresse</string>
-    <string name="city">Localité</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
     <string name="showCity">Martigny</string>
     <string name="lginBttnEnter">Enter</string>
     <string name="lginPasswrdTview">Password</string>
     <string name="emplidTview">Employee ID</string>
     <string name="title_activity_main">Pascal Délèze</string>
     <string name="title_activity_login">Pascal Délèze</string>
-    <string name="proBtn">Vos Données Contractuelles</string>
-    <string name="persoBtn">Vos Données Personnelles</string>
-    <string name="salBtn">Votre Salaire</string>
-    <string name="leavBtn">Déconnexion</string>
-    <string name="welcomeTview">Bienvenue</string>
+    <string name="proBtn">Your Professionnal Data</string>
+    <string name="persoBtn">Your Personnal Data</string>
+    <string name="salBtn">Your Salary</string>
+    <string name="leavBtn">Logout</string>
+    <string name="welcomeTview">Welcome</string>
 
 
 </resources>
