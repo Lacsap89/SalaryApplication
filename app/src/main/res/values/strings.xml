@@ -89,6 +89,16 @@
     <string name="street">Addresse</string>
     <string name="city">Localité</string>
     <string name="showCity">Martigny</string>
+    <string name="lginBttnEnter">Enter</string>
+    <string name="lginPasswrdTview">Password</string>
+    <string name="emplidTview">Employee ID</string>
+    <string name="title_activity_main">Pascal Délèze</string>
+    <string name="title_activity_login">Pascal Délèze</string>
+    <string name="proBtn">Vos Données Contractuelles</string>
+    <string name="persoBtn">Vos Données Personnelles</string>
+    <string name="salBtn">Votre Salaire</string>
+    <string name="leavBtn">Déconnexion</string>
+    <string name="welcomeTview">Bienvenue</string>
 
 
 </resources>

@@ -29,11 +29,7 @@
         <activity
             android:name=".App.Salary"
             android:label="@string/title_activity_salary" >
-
         </activity>
-
-
-
         <activity
             android:name=".App.PersonnalDataActivity"
             android:label="@string/title_activity_personnal_data" >
@@ -51,7 +47,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name=".App.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

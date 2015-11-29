@@ -35,6 +35,9 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         Intent intent = new Intent(this,PersonnalDataModify.class);
         startActivity(intent);
     }
+
+
+
 // SETTINGS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -42,8 +45,9 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
         return super.onCreateOptionsMenu(menu);
 
-  // RADIO BUTTONS
+
     }
+   // RADIO BUTTONS
     public void onRadioButtonClicked(View view) {
 
         // Is the button now checked?

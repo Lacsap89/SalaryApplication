@@ -58,7 +58,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void gotoHome(View view) {
-        Intent intent = new Intent(this,PersonnalDataActivity.class);
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }

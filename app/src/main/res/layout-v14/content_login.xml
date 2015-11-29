@@ -23,12 +23,15 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EN"
         android:id="@+id/switch1"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:checked="false" />
+        android:checked="false"
+        android:textOff="EN"
+        android:textOn="FR"
+        android:textSize="10sp"
+        android:showText="true" />
 
     <EditText
         android:layout_width="fill_parent"
@@ -43,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Employee ID"
+        android:text="@string/emplidTview"
         android:id="@+id/EmplidTview"
         android:layout_marginTop="56dp"
         android:layout_below="@+id/textView"
@@ -53,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Password"
+        android:text="@string/lginPasswrdTview"
         android:id="@+id/passwordTView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -70,7 +73,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Enter"
+        android:text="@string/lginBttnEnter"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
