@@ -24,6 +24,7 @@ public class PersonnalDataModify extends AppCompatActivity {
     private EditText nationality;
     private EditText workPermit;
     private Button save;
+    String id;
     PersonalData personalData = new PersonalData();
     PersonalDataSource pds = new PersonalDataSource(this);
 
@@ -36,10 +37,11 @@ public class PersonnalDataModify extends AppCompatActivity {
         Intent intent = getIntent();
 
 
+        id = getIntent().getStringExtra("id");
 
-        personalData = pds.getPersonById(1);
+        personalData = pds.getPersonById(Integer.parseInt(id));
         save = (Button) findViewById(R.id.save);
-        address = (EditText) findViewById(R.id.editText3);
+        address = (EditText) findViewById(R.id.editText1);
         birthdate = (EditText) findViewById(R.id.editText2);
         bank = (EditText) findViewById(R.id.showBank);
         civilStatus = (EditText) findViewById(R.id.showCivilStatus);
@@ -61,6 +63,7 @@ public class PersonnalDataModify extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                Intent intent = new Intent(PersonnalDataModify.this, PersonnalDataActivity.class);
+                personalData.setId(Integer.parseInt(id));
                 personalData.setAddress(address.getText().toString());
                 personalData.setBirthdate(birthdate.getText().toString());
                 personalData.setBank(bank.getText().toString());
@@ -68,8 +71,10 @@ public class PersonnalDataModify extends AppCompatActivity {
                 personalData.setNbChildren(Integer.parseInt(nbChildren.getText().toString()));
                 personalData.setNationality(nationality.getText().toString());
                 personalData.setPermit(workPermit.getText().toString());
-                pds.updatePersonalData(personalData);
 
+
+                pds.updatePersonalData(personalData);
+                intent.putExtra("id", id);
                 PersonnalDataModify.this.startActivity(intent);
 
             }

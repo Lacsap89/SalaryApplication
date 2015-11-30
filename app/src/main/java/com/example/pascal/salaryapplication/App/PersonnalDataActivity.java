@@ -26,15 +26,16 @@ public class PersonnalDataActivity extends AppCompatActivity  {
     TextView nationality;
     TextView workPermit;
     TextView bank;
+    PersonalData personalData = new PersonalData();
+
+    PersonalDataSource pds = new PersonalDataSource(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personnal_data);
 
-        PersonalData personalData = new PersonalData();
 
-        PersonalDataSource pds = new PersonalDataSource(this);
 
 
         id = (TextView) findViewById(R.id.showId);
@@ -48,7 +49,7 @@ public class PersonnalDataActivity extends AppCompatActivity  {
 
         id.setText(getIntent().getStringExtra("id"));
         personalData = pds.getPersonById(Integer.parseInt(id.getText().toString()));
-
+        personalData.setId(Integer.parseInt(id.getText().toString()));
 
         street.setText(personalData.getAddress());
         birthdate.setText(personalData.getBirthdate());
@@ -65,12 +66,19 @@ public class PersonnalDataActivity extends AppCompatActivity  {
     public void gotoModify(View view) {
 
         Intent intent = new Intent(this,PersonnalDataModify.class);
+        intent.putExtra("address", personalData.getAddress());
+        intent.putExtra("birthdate", personalData.getBirthdate());
+        intent.putExtra("bank", personalData.getBank());
+        intent.putExtra("civilStatus", personalData.getCivilStatus());
+        intent.putExtra("nbChildren", personalData.getNbChildren());
+        intent.putExtra("nationality", personalData.getNationality());
+        intent.putExtra("workPermit", personalData.getPermit());
+        intent.putExtra("id", id.getText().toString());
         startActivity(intent);
     }
 
 
-
-// SETTINGS
+    // SETTINGS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -28,7 +28,7 @@ android:fillViewport="false">
             android:inputType="textPostalAddress"
             android:ems="10"
             android:id="@+id/editText1"
-            android:hint="@string/address"
+
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -38,22 +38,7 @@ android:fillViewport="false">
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/city"
-            android:id="@+id/city"
-            android:layout_weight="1" />
 
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:ems="1"
-            android:id="@+id/editText3"
-            android:hint="@string/showCity"
-            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -77,7 +62,7 @@ android:fillViewport="false">
             android:inputType="date"
             android:ems="1"
             android:id="@+id/editText2"
-            android:hint="@string/showBirthdate"
+
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -99,8 +84,8 @@ android:fillViewport="false">
         <EditText android:id="@+id/showCivilStatus"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showCivilStatus"/>
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
@@ -122,7 +107,7 @@ android:fillViewport="false">
             android:inputType="numberDecimal"
             android:ems="1"
             android:id="@+id/editText"
-            android:hint="@string/showNbChildren"
+
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -143,8 +128,8 @@ android:fillViewport="false">
         <EditText android:id="@+id/showNationality"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showNationality"/>
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
@@ -163,8 +148,8 @@ android:fillViewport="false">
         <EditText android:id="@+id/showWorkPermit"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showWorkPermit"/>
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
@@ -183,8 +168,8 @@ android:fillViewport="false">
         <EditText android:id="@+id/showBank"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/showBank"/>
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
