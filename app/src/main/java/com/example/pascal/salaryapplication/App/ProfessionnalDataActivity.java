@@ -9,10 +9,27 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.pascal.salaryapplication.R;
+import com.example.pascal.salaryapplication.db.adapter.PersonalDataSource;
+import com.example.pascal.salaryapplication.db.adapter.ProfessionalDataSource;
+import com.example.pascal.salaryapplication.db.object.PersonalData;
+import com.example.pascal.salaryapplication.db.object.ProfessionalData;
 
 public class ProfessionnalDataActivity extends AppCompatActivity {
 
     private TextView showPost;
+    private TextView showContractBegin;
+    private TextView showSalaryClass;
+    private TextView showPercentage;
+    private TextView showHollidayLeft;
+    private TextView showBoss;
+    private String id;
+
+    private PersonalData personalData = new PersonalData();
+    private ProfessionalData professionalData = new ProfessionalData();
+
+    private PersonalDataSource pds = new PersonalDataSource(this);
+    private ProfessionalDataSource prds = new ProfessionalDataSource(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +39,26 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
         Intent intent=getIntent();
 
         showPost= (TextView) findViewById(R.id.showpost);
+        showContractBegin = (TextView) findViewById(R.id.showContractBegin);
+        showSalaryClass = (TextView) findViewById(R.id.showSalaryClass);
+        showPercentage = (TextView) findViewById(R.id.showPercentage);
+        showHollidayLeft = (TextView) findViewById(R.id.showHollidayLeft);
+        showBoss = (TextView) findViewById(R.id.showBoss);
 
-        showPost.setText(intent.getStringExtra("editPost"));
+        id = getIntent().getStringExtra("id");
+        personalData = pds.getPersonById(Integer.parseInt(id));
+        personalData.setId(Integer.parseInt(id));
+
+        professionalData.setPostId(personalData.getPostId());
+        professionalData = prds.getProfessionalDataById(professionalData.getPostId());
+
+        showPost.setText(professionalData.getPost());
+        showContractBegin.setText(personalData.getContractBegin());
+        showSalaryClass.setText(String.valueOf(professionalData.getSalaryClass()));
+        showPercentage.setText(String.valueOf(personalData.getPercentage()));
+        showHollidayLeft.setText(String.valueOf(personalData.getHollidayLeft()));
+        showBoss.setText(professionalData.getBoss());
+
     }
 
     @Override
@@ -49,6 +84,18 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
     }
     public void gotoModifyPro(View view) {
         Intent intent = new Intent(this,ProfessionnalDataModify.class);
+
+        intent.putExtra("post", professionalData.getPost());
+        intent.putExtra("contractBegin", personalData.getContractBegin());
+        intent.putExtra("salaryClass", professionalData.getSalaryClass());
+        intent.putExtra("percentage", personalData.getPercentage());
+        intent.putExtra("hollidayLeft", personalData.getHollidayLeft());
+        intent.putExtra("boss", professionalData.getBoss());
+        intent.putExtra("personalId", id);
+        intent.putExtra("professionalId", professionalData.getPostId());
+
+
+
         startActivity(intent);
     }
 }
