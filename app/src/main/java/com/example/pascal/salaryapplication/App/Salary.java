@@ -30,7 +30,9 @@ public class Salary extends AppCompatActivity {
     TextView showOther;
     TextView showFinalSalary;
     int id;
-    int proId;
+    PersonalData personalData;
+    ProfessionalData professionalData;
+    SalaryData salaryData;
 
 
     @Override
@@ -42,19 +44,17 @@ public class Salary extends AppCompatActivity {
         Intent intent = getIntent();
 
         id= Integer.parseInt(getIntent().getStringExtra("id"));
-        PersonalData personalData = new PersonalData();
+        personalData= new PersonalData();
         PersonalDataSource pds = new PersonalDataSource(this);
 
         personalData = pds.getPersonById(id);
 
-        ProfessionalData professionalData = new ProfessionalData();
+       professionalData = new ProfessionalData();
         ProfessionalDataSource prds = new ProfessionalDataSource(this);
 
         professionalData = prds.getProfessionalDataById(personalData.getPostId());
-        //professionalData.setSalaryId(1);
-        //prds.updateProfessionalData(professionalData);
 
-        SalaryData salaryData = new SalaryData();
+       salaryData = new SalaryData();
         SalaryDataSource sds = new SalaryDataSource(this);
 
         salaryData = sds.getSalaryDataById(professionalData.getSalaryId());

@@ -29,8 +29,7 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
     EditText id;
     EditText password;
-    TextView idt;
-    TextView passwordt;
+
     PersonalData personalData = new PersonalData();
 
 
@@ -64,13 +63,20 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
 */
 
+        ProfessionalData professionalData = new ProfessionalData();
+        professionalData.setPostId(1);
+        professionalData.setSalaryId(1);
+        ProfessionalDataSource prds = new ProfessionalDataSource(this);
+        prds.updateProfessionalData(professionalData);
+
+
+
 
 
 
         id = (EditText) findViewById(R.id.editText4);
         password = (EditText) findViewById(R.id.editText5);
-        idt = (TextView) findViewById(R.id.EmplidTview);
-        passwordt = (TextView) findViewById(R.id.passwordTView);
+
 
 
     }

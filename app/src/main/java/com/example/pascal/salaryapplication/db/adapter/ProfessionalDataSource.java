@@ -60,6 +60,7 @@ public class ProfessionalDataSource {
         professionalData.setPost(cursor.getString(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_POST)));
         professionalData.setSalaryClass(cursor.getInt(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_SALARY_CLASS)));
         professionalData.setBoss(cursor.getString(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_BOSS)));
+        professionalData.setSalaryId(cursor.getInt(cursor.getColumnIndex(SalaryContract.ProfessionnalData.KEY_SALARYID)));
 
         return professionalData;
     }
