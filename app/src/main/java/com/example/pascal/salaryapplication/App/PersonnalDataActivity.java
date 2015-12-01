@@ -115,7 +115,7 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         if (id == R.id.action_settings) {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setView(R.layout.dialog_settings);
+           // builder.setView(R.layout.dialog_settings);
    //OK AND CANCEL BUTTONS
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
