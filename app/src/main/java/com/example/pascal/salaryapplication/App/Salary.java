@@ -127,4 +127,10 @@ public class Salary extends AppCompatActivity {
         intent.putExtra("id", id);
         startActivity(intent);
     }
+    public void gotoModify(View view){
+        Intent intent = new Intent(this, SalaryDataAdd.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
+    }
+
 }

@@ -149,6 +149,5 @@ public class MainActivity extends AppCompatActivity {
     public void logout(View view) {
         Intent intent = new Intent(this,Login.class);
         startActivity(intent);
-        MainActivity.this.onDestroy();
     }
 }
