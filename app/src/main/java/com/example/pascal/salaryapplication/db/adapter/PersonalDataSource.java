@@ -99,6 +99,11 @@ public class PersonalDataSource {
                 new String[] {String.valueOf(personalData.getId())});
     }
 
+    public void deletePersonalData(long id){
+        this.db.delete(SalaryContract.PersonalData.TABLE_PERSONALDATA, SalaryContract.PersonalData.KEY_ID + " = ?",
+                new String[] {String.valueOf(id)});
+    }
+
 
 
 

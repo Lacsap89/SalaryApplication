@@ -43,31 +43,7 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
         t.setOnCheckedChangeListener(this);
 
 
-        /*personalData.setName("Pascal");
-        personalData.setLastname("Délèze");
-        personalData.setAddress("Chemin du Catogne 13");
-        personalData.setBirthdate("10.05.1989");
-        personalData.setCivilStatus("Married");
-        personalData.setNbChildren(0);
-        personalData.setNationality("CH");
-        personalData.setPermit("-");
-        personalData.setBank("CH0000000000011100");
-        personalData.setContractBegin("01.10.2014");
-        personalData.setPercentage(60);
-        personalData.setHollidayLeft(3);
-        personalData.setPassword("Test1");
-        personalData.setPostId(1);
-        personalData.setId(2);
 
-        PersonalDataSource pds = new PersonalDataSource(this);
-
-*/
-
-        ProfessionalData professionalData = new ProfessionalData();
-        professionalData.setPostId(1);
-        professionalData.setSalaryId(1);
-        ProfessionalDataSource prds = new ProfessionalDataSource(this);
-        prds.updateProfessionalData(professionalData);
 
 
 
@@ -90,7 +66,6 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
         Intent intent2 = new Intent(this,Login.class);
         PersonalDataSource pds = new PersonalDataSource(this);
         ProfessionalDataSource prds = new ProfessionalDataSource(this);
-        SalaryDataSource sds = new SalaryDataSource(this);
         personalData.setId(Integer.parseInt(id.getText().toString()));
         personalData = pds.getPersonById(personalData.getId());
         if(personalData.getPassword().equals(password.getText().toString())) {
@@ -99,8 +74,7 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
             startActivity(intent);
         }
         else {
-//            idt.setText(personalData.getId());
-  //          password.setText(personalData.getPassword());
+//
             startActivity(intent2);
         }
     }

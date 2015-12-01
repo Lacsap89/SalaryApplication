@@ -9,6 +9,8 @@
     <string name="showHollidayLeft">20</string>
     <string name="showBoss">Yannick Da Silva</string>
     <string name="modify">Modifier</string>
+    <string name="delete">Effacer</string>
+    <string name="deletetex">Saisissez l id de la personne à supprimer</string>
 
     <!-- modify professionnal Data resources and common resources -->
 

@@ -9,6 +9,8 @@
     <string name="showHollidayLeft">20</string>
     <string name="showBoss">Yannick Da Silva</string>
     <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+    <string name="deletetext">Enter the id for the person you want to Exterminate</string>
 
     <!-- modify professionnal Data resources and common resources -->
 
