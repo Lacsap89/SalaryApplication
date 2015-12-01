@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
 // MAIN ACTIVITY BUTTONS CLICK
     public void gotoperso(View view) {
         Intent intent = new Intent(this,PersonnalDataActivity.class);
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 // CLEAN DISCONNECT (TODO)
+
 // SETTINGS
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -144,4 +146,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void logout(View view) {
+        Intent intent = new Intent(this,Login.class);
+        startActivity(intent);
+        MainActivity.this.onDestroy();
+    }
 }
