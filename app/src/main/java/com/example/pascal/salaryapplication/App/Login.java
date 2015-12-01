@@ -94,7 +94,7 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
         }
         else {
 //            idt.setText(personalData.getId());
-  //          passwordt.setText(personalData.getPassword());
+  //          password.setText(personalData.getPassword());
             startActivity(intent2);
         }
     }

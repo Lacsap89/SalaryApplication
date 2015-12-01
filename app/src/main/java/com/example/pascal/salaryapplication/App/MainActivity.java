@@ -71,25 +71,29 @@ public class MainActivity extends AppCompatActivity {
             final CharSequence[]items ={"Français","English"};
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
             // settings.RADIO BUTTONS
+
+
             builder.setTitle("Settings").setSingleChoiceItems(items,-1, new DialogInterface.OnClickListener() {
                 TextView tVwelcome = (TextView) findViewById(R.id.welcomTview);
                 Button btnPerso = (Button)findViewById(R.id.persoBtn);
                 Button btnPro = (Button)findViewById(R.id.proBtn);
                 Button btnSal = (Button)findViewById(R.id.salaryBtn);
                 Button btnLeave = (Button)findViewById(R.id.leaveBtn);
+                
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     switch(which) {
 
                         case 0:
-                            Toast.makeText(MainActivity.this.getApplicationContext(),"Français",Toast.LENGTH_LONG).show();
+
                             Locale myLocale = new Locale("fr");
                             Locale.setDefault(myLocale);
                             android.content.res.Configuration config = new android.content.res.Configuration();
                             config.locale = myLocale;
                             getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-
+                            Toast.makeText(MainActivity.this.getApplicationContext(), myLocale.toString(), Toast.LENGTH_LONG).show();
 
                             tVwelcome.setText(R.string.welcomeTview);
                             btnPerso.setText(R.string.persoBtn);
@@ -100,12 +104,13 @@ public class MainActivity extends AppCompatActivity {
 
                                 break;
                         case 1:
-                            Toast.makeText(MainActivity.this.getApplicationContext(),"English",Toast.LENGTH_LONG).show();
+
                             myLocale = new Locale("en");
                             Locale.setDefault(myLocale);
                             config = new android.content.res.Configuration();
                             config.locale = myLocale;
                             getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+                            Toast.makeText(MainActivity.this.getApplicationContext(), myLocale.toString(), Toast.LENGTH_LONG).show();
 
                             tVwelcome.setText(R.string.welcomeTview);
                             btnPerso.setText(R.string.persoBtn);
