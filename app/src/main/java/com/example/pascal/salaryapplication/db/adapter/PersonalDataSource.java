@@ -43,7 +43,9 @@ public class PersonalDataSource {
         values.put(SalaryContract.PersonalData.KEY_BANK, personalData.getBank());
         values.put(SalaryContract.PersonalData.KEY_PASSWORD, personalData.getPassword());
         values.put(SalaryContract.PersonalData.KEY_POSTID, personalData.getPostId());
-
+        values.put(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN, personalData.getContractBegin());
+        values.put(SalaryContract.PersonalData.KEY_PERCENTAGE, personalData.getPercentage());
+        values.put(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT, personalData.getHollidayLeft());
         id = this.db.insert(SalaryContract.PersonalData.TABLE_PERSONALDATA, null, values);
 
         return id;
@@ -73,6 +75,9 @@ public class PersonalDataSource {
         personalData.setBank(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_BANK)));
         personalData.setPassword(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PASSWORD)));
         personalData.setPostId(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_POSTID)));
+        personalData.setContractBegin(cursor.getString(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN)));
+        personalData.setPercentage(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_PERCENTAGE)));
+        personalData.setHollidayLeft(cursor.getInt(cursor.getColumnIndex(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT)));
 
         return personalData;
     }
@@ -94,6 +99,9 @@ public class PersonalDataSource {
         values.put(SalaryContract.PersonalData.KEY_BANK, personalData.getBank());
         values.put(SalaryContract.PersonalData.KEY_PASSWORD, personalData.getPassword());
         values.put(SalaryContract.PersonalData.KEY_POSTID, personalData.getPostId());
+        values.put(SalaryContract.PersonalData.KEY_CONTRACT_BEGIN, personalData.getContractBegin());
+        values.put(SalaryContract.PersonalData.KEY_PERCENTAGE, personalData.getPercentage());
+        values.put(SalaryContract.PersonalData.KEY_HOLLIDAY_LEFT, personalData.getHollidayLeft());
 
         return this.db.update(SalaryContract.PersonalData.TABLE_PERSONALDATA, values, SalaryContract.PersonalData.KEY_ID + " = ?",
                 new String[] {String.valueOf(personalData.getId())});

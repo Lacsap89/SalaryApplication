@@ -11,6 +11,7 @@
     <string name="modify">Modifier</string>
     <string name="delete">Effacer</string>
     <string name="deletetex">Saisissez l id de la personne à supprimer</string>
+    <string name="add">Ajouter</string>
 
     <!-- modify professionnal Data resources and common resources -->
 

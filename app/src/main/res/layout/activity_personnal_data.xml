@@ -191,6 +191,16 @@
             android:text="@string/modify"
             android:onClick="gotoModify"/>
 
+        <Button
+            android:id="@+id/add"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:onClick="gotoAdd"/>
+
+
+
     </LinearLayout>
 
 

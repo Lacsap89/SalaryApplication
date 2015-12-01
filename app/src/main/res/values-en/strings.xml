@@ -11,6 +11,7 @@
     <string name="modify">Modify</string>
     <string name="delete">Delete</string>
     <string name="deletetext">Enter the id for the person you want to Exterminate</string>
+    <string name="add">Add</string>
 
     <!-- modify professionnal Data resources and common resources -->
 

@@ -83,6 +83,12 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         startActivity(intent);
     }
 
+    public void gotoAdd(View view){
+        Intent intent = new Intent(this, PersonalDataAdd.class);
+        intent.putExtra("id", id.getText().toString());
+        startActivity(intent);
+    }
+
 
     // SETTINGS
     @Override
