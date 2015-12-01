@@ -85,55 +85,5 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
         return super.onCreateOptionsMenu(menu);
     }
-   // RADIO BUTTONS
-    public void onRadioButtonClicked(View view) {
-
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.diagRbFr:
-                if (checked)
-                    // FRENCH
-
-                    break;
-            case R.id.diagRbEn:
-                if (checked)
-                    // ENGLISH
-                    break;
-        }
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setView(R.layout.dialog_settings);
-   //OK AND CANCEL BUTTONS
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    // User clicked OK button
-                }
-            });
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    // User cancelled the dialog
-                }
-            });
-
-            builder.create()
-                    .show();
-
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
 }
