@@ -1,6 +1,7 @@
 package com.example.pascal.salaryapplication.App;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -28,9 +29,10 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
     EditText id;
     EditText password;
+    TextView idt;
+    TextView passwordt;
     PersonalData personalData = new PersonalData();
-    ProfessionalData professionalData = new ProfessionalData();
-    SalaryData salaryData = new SalaryData();
+
 
 
     @Override
@@ -40,9 +42,6 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
 
         Switch t = (Switch) findViewById(R.id.switch1);
         t.setOnCheckedChangeListener(this);
-
-
-
 
 
         /*personalData.setName("Pascal");
@@ -58,14 +57,20 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
         personalData.setPercentage(60);
         personalData.setHollidayLeft(3);
         personalData.setPassword("Test1");
-        personalData.setPostId(2);
+        personalData.setPostId(1);
+        personalData.setId(2);
 
-        personalData.setId(( pds.updatePersonalData(personalData)));
-        */
-        SQLiteHelper sqlHelper = SQLiteHelper.getInstance(this);
-        sqlHelper.getWritableDatabase().close();
+        PersonalDataSource pds = new PersonalDataSource(this);
+
+*/
+
+
+
+
         id = (EditText) findViewById(R.id.editText4);
         password = (EditText) findViewById(R.id.editText5);
+        idt = (TextView) findViewById(R.id.EmplidTview);
+        passwordt = (TextView) findViewById(R.id.passwordTView);
 
 
     }
@@ -88,6 +93,8 @@ public class Login extends AppCompatActivity implements CompoundButton.OnChecked
             startActivity(intent);
         }
         else {
+//            idt.setText(personalData.getId());
+  //          passwordt.setText(personalData.getPassword());
             startActivity(intent2);
         }
     }

@@ -35,7 +35,7 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personnal_data);
 
-
+        Intent intent = getIntent();
 
 
         id = (TextView) findViewById(R.id.showId);

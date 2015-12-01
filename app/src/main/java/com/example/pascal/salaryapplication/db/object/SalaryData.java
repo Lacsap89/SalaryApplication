@@ -24,6 +24,20 @@ public class SalaryData {
     public double getBrutSalary() {return brutSalary;}
     public void setBrutSalary(double brutSalary) {this.brutSalary=brutSalary;}
 
+
+    public SalaryData(){
+
+    }
+    public SalaryData(double BrutSalary){
+        setBrutSalary(BrutSalary);
+        avsaiapgac = brutSalary*6.00/100.00;
+        lpp = brutSalary*1.00/100.00;
+        laa = brutSalary*0.50/100.00;
+        familyTaxes = brutSalary*0.50/100.00;
+        netSalary = brutSalary-avsaiapgac-lpp-laa-familyTaxes-netSalary;
+        finalSalary = netSalary-withholdingTaxes+advance-other;
+    }
+
     public double getAvsaiapgac() {return avsaiapgac;}
     public void setAvsaiapgac(double avsaiapgac){this.avsaiapgac=avsaiapgac;}
 
