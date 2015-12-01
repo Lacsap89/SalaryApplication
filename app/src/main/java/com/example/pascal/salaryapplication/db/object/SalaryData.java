@@ -1,5 +1,7 @@
 package com.example.pascal.salaryapplication.db.object;
 
+import android.widget.Button;
+
 /**
  * Created by Pascal on 19.11.2015.
  */
@@ -17,6 +19,7 @@ public class SalaryData {
     private double withholdingTaxes;
     private double other;
     private double finalSalary;
+
 
     public int getId() {return id;}
     public void setId(int id){this.id=id;}

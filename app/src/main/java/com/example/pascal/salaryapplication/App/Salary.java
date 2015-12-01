@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.pascal.salaryapplication.R;
@@ -29,10 +31,13 @@ public class Salary extends AppCompatActivity {
     TextView showTaxes;
     TextView showOther;
     TextView showFinalSalary;
-    int id;
+    String id;
     PersonalData personalData;
     ProfessionalData professionalData;
     SalaryData salaryData;
+    private Button modify;
+    private Button add;
+    private Button delete;
 
 
     @Override
@@ -43,11 +48,11 @@ public class Salary extends AppCompatActivity {
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
         Intent intent = getIntent();
 
-        id= Integer.parseInt(getIntent().getStringExtra("id"));
+        id= getIntent().getStringExtra("id");
         personalData= new PersonalData();
         PersonalDataSource pds = new PersonalDataSource(this);
 
-        personalData = pds.getPersonById(id);
+        personalData = pds.getPersonById(Integer.parseInt(id));
 
        professionalData = new ProfessionalData();
         ProfessionalDataSource prds = new ProfessionalDataSource(this);
@@ -69,6 +74,9 @@ public class Salary extends AppCompatActivity {
         showTaxes = (TextView) findViewById(R.id.showTaxes);
         showOther = (TextView) findViewById(R.id.showOther);
         showFinalSalary = (TextView) findViewById(R.id.showFinalSalary);
+        modify = (Button) findViewById(R.id.modify);
+        add = (Button) findViewById(R.id.add);
+        delete = (Button) findViewById(R.id.delete);
 
 
 
@@ -79,6 +87,11 @@ public class Salary extends AppCompatActivity {
         showALFA.setText(String.valueOf(salaryData.getFamilyTaxes()));
         showLAA.setText(String.valueOf(salaryData.getLaa()));
         showNetSalary.setText(String.valueOf(salaryData.getNetSalary()));
+        showAdvance.setText(String.valueOf(salaryData.getAdvance()));
+        showTaxes.setText(String.valueOf(salaryData.getWithholdingTaxes()));
+        showOther.setText(String.valueOf(salaryData.getOther()));
+        showFinalSalary.setText(String.valueOf(salaryData.getFinalSalary()));
+
     }
 
     @Override
@@ -101,5 +114,17 @@ public class Salary extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void gotoDelete(View view){
+        Intent intent = new Intent(this, SalaryDataDelete.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
+    }
+
+    public void gotoAdd(View view){
+        Intent intent = new Intent(this, SalaryDataAdd.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
     }
 }

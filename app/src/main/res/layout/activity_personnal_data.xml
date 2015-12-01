@@ -168,40 +168,29 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/delete"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:text="@string/delete"
+        android:onClick="gotoDelete"/>
 
+    <Button
+        android:id="@+id/modify"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/modify"
+        android:onClick="gotoModify"/>
 
-        <Button
-            android:id="@+id/delete"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/delete"
-            android:onClick="gotoDelete"/>
-
-        <Button
-            android:id="@+id/modify"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/modify"
-            android:onClick="gotoModify"/>
-
-        <Button
-            android:id="@+id/add"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/add"
-            android:onClick="gotoAdd"/>
-
-
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/add"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:onClick="gotoAdd"/>
 
 
 </LinearLayout>
