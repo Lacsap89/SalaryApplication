@@ -77,7 +77,7 @@ public final class SalaryContract {
                 + ProfessionnalData.KEY_POST + " TEXT, "
                 + ProfessionnalData.KEY_SALARY_CLASS + " INTEGER, "
                 + ProfessionnalData.KEY_BOSS + " TEXT, "
-                + ProfessionnalData.KEY_SALARYID + " INTEGER, "
+                + ProfessionnalData.KEY_SALARYID + " INTEGER"
                 + ");";
     }
 

@@ -93,6 +93,8 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
         intent.putExtra("boss", professionalData.getBoss());
         intent.putExtra("id", id.getText().toString());
         intent.putExtra("professionalId", professionalData.getPostId());
+        professionalData.setSalaryId(1);
+
 
 
 
