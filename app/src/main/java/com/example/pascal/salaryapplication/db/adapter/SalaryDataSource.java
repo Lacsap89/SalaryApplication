@@ -55,12 +55,10 @@ public class SalaryDataSource {
 
         Cursor cursor = this.db.rawQuery(sql, null);
 
-        if(cursor != null){
-            cursor.moveToFirst();
-        }
+        cursor.moveToFirst();
+
 
         SalaryData salaryData = new SalaryData();
-        salaryData.setId(cursor.getInt(cursor.getColumnIndex(SalaryContract.SalaryData.KEY_SALARYID)));
         salaryData.setBrutSalary(cursor.getDouble(cursor.getColumnIndex(SalaryContract.SalaryData.KEY_BRUTSALARY)));
         salaryData.setAvsaiapgac(cursor.getDouble(cursor.getColumnIndex(SalaryContract.SalaryData.KEY_AVSAIAPGAC)));
         salaryData.setLpp(cursor.getDouble(cursor.getColumnIndex(SalaryContract.SalaryData.KEY_LPP)));

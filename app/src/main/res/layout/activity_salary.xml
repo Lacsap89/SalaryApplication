@@ -20,8 +20,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showBrutSalary"/>
+            android:gravity="right" />
 
     </LinearLayout>
 
@@ -55,8 +54,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showAVS"/>
+            android:gravity="right" />
 
     </LinearLayout>
 
@@ -77,8 +75,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showLPP"/>
+            android:gravity="right" />
 
     </LinearLayout>
 
@@ -99,8 +96,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showLAA"/>
+            android:gravity="right"/>
 
     </LinearLayout>
 
@@ -121,8 +117,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showAlfa"/>
+            android:gravity="right" />
 
     </LinearLayout>
 
@@ -143,8 +138,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showNetSalary"/>
+            android:gravity="right"/>
 
 
     </LinearLayout>
@@ -179,8 +173,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showAdvance"/>
+            android:gravity="right"/>
 
     </LinearLayout>
 
@@ -201,8 +194,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showTaxes"/>
+            android:gravity="right"/>
 
     </LinearLayout>
 
@@ -223,8 +215,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:hint="@string/showOther"/>
+            android:gravity="right" />
 
     </LinearLayout>
 

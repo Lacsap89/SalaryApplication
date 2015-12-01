@@ -26,6 +26,7 @@ public class ProfessionnalDataModify extends AppCompatActivity {
     EditText editHollidayLeft;
     EditText editBoss;
     Button save;
+    String id;
     ProfessionalData professionalData = new ProfessionalData();
     ProfessionalDataSource pds = new ProfessionalDataSource(this);
     PersonalData personalData = new PersonalData();
@@ -47,6 +48,7 @@ public class ProfessionnalDataModify extends AppCompatActivity {
         editHollidayLeft = (EditText) findViewById(R.id.editHollidayLeft);
         editBoss = (EditText) findViewById(R.id.editBoss);
 
+        id=intent.getStringExtra("id");
         editPost.setText(intent.getStringExtra("post"));
         editContractBegin.setText(intent.getStringExtra("contractBegin"));
         editSalaryClass.setText(intent.getStringExtra("salaryClass"));
@@ -58,10 +60,14 @@ public class ProfessionnalDataModify extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfessionnalDataModify.this, ProfessionnalDataActivity.class);
+                personalData.setId(Integer.parseInt(id));
+                personalData = peds.getPersonById(personalData.getId());
+                professionalData.setPostId(personalData.getPostId());
+                professionalData = pds.getProfessionalDataById(professionalData.getPostId());
+
                 professionalData.setPost(editPost.getText().toString());
                 professionalData.setSalaryClass(Integer.parseInt(editSalaryClass.getText().toString()));
                 professionalData.setBoss(editBoss.getText().toString());
-
                 personalData.setContractBegin(editContractBegin.getText().toString());
                 personalData.setPercentage(Integer.parseInt(editPercentage.getText().toString()));
                 personalData.setHollidayLeft(Integer.parseInt(editHollidayLeft.getText().toString()));
@@ -70,6 +76,7 @@ public class ProfessionnalDataModify extends AppCompatActivity {
 
                 pds.updateProfessionalData(professionalData);
                 peds.updatePersonalData(personalData);
+                intent.putExtra("id", id);
 
                 ProfessionnalDataModify.this.startActivity(intent);
 

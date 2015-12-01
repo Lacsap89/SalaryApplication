@@ -22,7 +22,7 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
     private TextView showPercentage;
     private TextView showHollidayLeft;
     private TextView showBoss;
-    private String id;
+    private TextView id;
 
     private PersonalData personalData = new PersonalData();
     private ProfessionalData professionalData = new ProfessionalData();
@@ -38,6 +38,7 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
 
         Intent intent=getIntent();
 
+        id = (TextView) findViewById(R.id.showId);
         showPost= (TextView) findViewById(R.id.showpost);
         showContractBegin = (TextView) findViewById(R.id.showContractBegin);
         showSalaryClass = (TextView) findViewById(R.id.showSalaryClass);
@@ -45,9 +46,8 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
         showHollidayLeft = (TextView) findViewById(R.id.showHollidayLeft);
         showBoss = (TextView) findViewById(R.id.showBoss);
 
-        id = getIntent().getStringExtra("id");
-        personalData = pds.getPersonById(Integer.parseInt(id));
-        personalData.setId(Integer.parseInt(id));
+        id.setText(getIntent().getStringExtra("id"));
+        personalData = pds.getPersonById(Integer.parseInt(id.getText().toString()));
 
         professionalData.setPostId(personalData.getPostId());
         professionalData = prds.getProfessionalDataById(professionalData.getPostId());
@@ -91,7 +91,7 @@ public class ProfessionnalDataActivity extends AppCompatActivity {
         intent.putExtra("percentage", personalData.getPercentage());
         intent.putExtra("hollidayLeft", personalData.getHollidayLeft());
         intent.putExtra("boss", professionalData.getBoss());
-        intent.putExtra("personalId", id);
+        intent.putExtra("id", id.getText().toString());
         intent.putExtra("professionalId", professionalData.getPostId());
 
 
