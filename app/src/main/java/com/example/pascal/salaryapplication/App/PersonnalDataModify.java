@@ -29,6 +29,12 @@ public class PersonnalDataModify extends AppCompatActivity {
     PersonalDataSource pds = new PersonalDataSource(this);
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personnal_data_modify);
@@ -79,5 +85,6 @@ public class PersonnalDataModify extends AppCompatActivity {
 
             }
         });
+
     }
 }
