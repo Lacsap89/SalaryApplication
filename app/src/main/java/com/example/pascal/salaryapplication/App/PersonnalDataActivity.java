@@ -85,25 +85,7 @@ public class PersonnalDataActivity extends AppCompatActivity  {
         getMenuInflater().inflate(R.menu.menu_personnal_data, menu);
         return super.onCreateOptionsMenu(menu);
     }
-   // RADIO BUTTONS
-    public void onRadioButtonClicked(View view) {
 
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.diagRbFr:
-                if (checked)
-                    // FRENCH
-
-                    break;
-            case R.id.diagRbEn:
-                if (checked)
-                    // ENGLISH
-                    break;
-        }
-    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
